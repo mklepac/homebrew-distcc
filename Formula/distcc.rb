@@ -9,7 +9,7 @@ class Distcc < Formula
   version "v3.2rc1.pspdfkit"
   sha256 "523a8bd2fcbd2a6fa59d6dad5809676f93fcc05c8ebb8770f4ddb4390b41debe"
 
-  depends_on "autotools" => :build
+  depends_on "autoconf" => :build
   depends_on "automake" => :build
 
   def install
