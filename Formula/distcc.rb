@@ -4,10 +4,10 @@
 
 class Distcc < Formula
   desc "PSPDFKit's fork of distcc"
-  homepage "https://github.com/PSPDFKit-labs/distcc"
-  url "https://github.com/PSPDFKit-labs/distcc/archive/v3.2rc1.pspdfkit.tar.gz"
-  version "v3.2rc1.pspdfkit"
-  sha256 "523a8bd2fcbd2a6fa59d6dad5809676f93fcc05c8ebb8770f4ddb4390b41debe"
+  homepage "https://github.com/mklepac/distcc"
+  url "https://github.com/mklepac/distcc/archive/v3.2rc1.pspdfkit.mklepac.tar.gz"
+  version "v3.2rc1.pspdfkit.mklepac"
+  sha256 "79ac64447e160ea4e4eca61864c56ebd4ad13a19a9939f264a77f7265e24ebd1"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -19,7 +19,6 @@ class Distcc < Formula
     system "./autogen.sh"
     system "./configure", "--without-libiberty",
                           "--disable-Werror",
-                          "--disable-pump-mode",
                           "--prefix=#{prefix}"
     system "make", "install"
   end
