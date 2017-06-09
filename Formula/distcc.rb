@@ -19,6 +19,7 @@ class Distcc < Formula
     system "./autogen.sh"
     system "./configure", "--without-libiberty",
                           "--disable-Werror",
+                          "--disable-pump-mode",
                           "--prefix=#{prefix}"
     system "make", "install"
   end
